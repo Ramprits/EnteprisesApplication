@@ -7,5 +7,24 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "libs": {
+      "tags": []
+    },
+    "xplat": {
+      "tags": []
+    },
+    "web-angular6": {
+      "tags": []
+    },
+    "web-angular6-e2e": {
+      "tags": []
+    },
+    "featuresuinav": {
+      "tags": []
+    },
+    "features-ui-nav": {
+      "tags": []
+    }
+  }
 }

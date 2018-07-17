@@ -16,6 +16,21 @@
     ],
     "baseUrl": ".",
     "paths": {
+      "@wcmApplication/*": [
+        "libs/*"
+      ],
+      "@wcmApplication/web": [
+        "xplat/web/index.ts"
+      ],
+      "@wcmApplication/web/*": [
+        "xplat/web/*"
+      ],
+      "@wcmApplication/featuresuinav": [
+        "libs/featuresuinav/src/index.ts"
+      ],
+      "@wcmApplication/features/ui/nav": [
+        "libs/features/ui/nav/src/index.ts"
+      ]
     }
   },
   "exclude": [
