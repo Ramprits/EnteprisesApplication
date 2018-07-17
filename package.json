@@ -25,7 +25,8 @@
     "help": "./node_modules/.bin/nx help",
     "clean.shared": "cd libs/ && git clean -dfX && cd ../xplat/ && git clean -dfX",
     "clean": "npx rimraf hooks node_modules package-lock.json && npm i",
-    "start.web.angular6": "ng serve web-angular6"
+    "start.web.angular6": "ng serve web-angular6",
+    "build.web.angular6": "ng build --prod --aot"
   },
   "private": true,
   "dependencies": {

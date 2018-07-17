@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: './features/home/home.module#HomeModule'
+  },
+  {
+    path: 'post',
+    loadChildren: './features/shared/components/post.module#PostModule'
   }
 ];
 
