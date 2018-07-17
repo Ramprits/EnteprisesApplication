@@ -4,24 +4,24 @@
       <div class="form-group">
         <label for="title">Title:</label>
         <input id="title" class="form-control" type="text" name="title" ngModel required #title="ngModel">
-        <span *ngIf="!postForm.valid && postForm.touched">Please enter title !</span>
+        <span *ngIf="!title.valid && title.touched">Please enter title !</span>
       </div>
       <div class="form-group">
         <label for="name">Name:</label>
         <input id="name" class="form-control" type="text" name="name" ngModel required #name="ngModel">
-        <span *ngIf="!postForm.valid && postForm.touched">Please enter name !</span>
+        <span *ngIf="!name.valid && name.touched">Please enter name !</span>
 
       </div>
       <div class="form-group">
         <label for="email">Email:</label>
         <input id="email" class="form-control" type="email" name="email" email ngModel required #email="ngModel">
-        <span *ngIf="!postForm.valid && postForm.touched">Please enter name !</span>
+        <span *ngIf="!email.valid && email.touched">Please enter name !</span>
 
       </div>
       <div class="form-group">
         <label for="description">Description</label>
         <input id="description" class="form-control" type="text" name="description" required ngModel #description="ngModel">
-        <span *ngIf="!postForm.valid && postForm.touched">Please enter description !</span>
+        <span *ngIf="!description.valid && description.touched">Please enter description !</span>
 
       </div>
       <button class="btn btn-primary btn-sm" [disabled]="!postForm.valid" type="submit">Save</button>
