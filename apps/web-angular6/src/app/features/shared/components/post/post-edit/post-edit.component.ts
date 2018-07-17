@@ -1,4 +1,11 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Output,
+  EventEmitter,
+  ViewChild
+} from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-post-edit',
@@ -6,6 +13,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./post-edit.component.css']
 })
 export class PostEditComponent implements OnInit {
+  @ViewChild('postForm') signUpForm: NgForm;
   @Output()
   addPost = new EventEmitter<{
     title: string;
@@ -16,8 +24,12 @@ export class PostEditComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-  onSubmit(postData: any) {
-    console.log(postData.value);
-    this.addPost.emit(postData);
+  // onSubmit(postData: any) {
+  //   console.log(postData);
+  //   this.addPost.emit(postData);
+  // }
+
+  onSubmit() {
+    console.log(this.signUpForm);
   }
 }
