@@ -10,4 +10,8 @@ export class PostComponent extends BaseComponent {
   constructor() {
     super();
   }
+
+  onSave(postdata: any) {
+    console.log(postdata.value);
+  }
 }
