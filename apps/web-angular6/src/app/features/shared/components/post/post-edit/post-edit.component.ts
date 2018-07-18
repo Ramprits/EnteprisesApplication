@@ -21,13 +21,10 @@ export class PostEditComponent implements OnInit {
     email: string;
     description: string;
   }>();
+  genders = ['Male', 'Female', 'Student'];
   constructor() {}
 
   ngOnInit() {}
-  // onSubmit(postData: any) {
-  //   console.log(postData);
-  //   this.addPost.emit(postData);
-  // }
 
   onSubmit() {
     console.log(this.signUpForm);
