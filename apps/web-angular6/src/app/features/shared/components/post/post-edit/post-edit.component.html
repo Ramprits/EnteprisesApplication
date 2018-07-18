@@ -1,33 +1,43 @@
 <div class="row">
-  <div class="col-md-6 offset-3">
+  <div class="col-md-10 offset-1">
     <form #postForm="ngForm" (ngSubmit)="onSubmit()">
-      <div class="form-group">
-        <label for="title">Title:</label>
-        <input id="title" class="form-control" type="text" name="title" ngModel required #title="ngModel">
-        <span *ngIf="!title.valid && title.touched">Please enter title !</span>
-      </div>
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input id="name" class="form-control" type="text" name="name" ngModel required #name="ngModel">
-        <span *ngIf="!name.valid && name.touched">Please enter name !</span>
 
-      </div>
-      <div class="form-group">
-        <label for="email">Email:</label>
-        <input id="email" class="form-control" type="email" name="email" email ngModel required #email="ngModel">
-        <span *ngIf="!email.valid && email.touched">Please enter name !</span>
+      <div ngModelGroup="userData" #userData="ngModelGroup">
+        <div class="form-group">
+          <label for="title">Title:</label>
+          <input id="title" class="form-control" type="text" name="title" ngModel required #title="ngModel">
+          <span *ngIf="!title.valid && title.touched">Please enter title !</span>
+        </div>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input id="name" class="form-control" type="text" name="name" ngModel required #name="ngModel">
+          <span *ngIf="!name.valid && name.touched">Please enter name !</span>
 
+        </div>
+        <span class="text-danger" *ngIf="!userData.valid && userData.touched">
+          User Data is not valid
+        </span>
       </div>
-      <div class="form-group">
-        <label for="description">Description</label>
-        <input id="description" class="form-control" type="text" name="description" required ngModel #description="ngModel">
-        <span *ngIf="!description.valid && description.touched">Please enter description !</span>
+      <div ngModelGroup="userEmail">
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input id="email" class="form-control" type="email" name="email" email ngModel required #email="ngModel">
+          <span *ngIf="!email.valid && email.touched">Please enter email !</span>
 
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea id="description" class="form-control" rows="3" type="text" name="description" required ngModel #description="ngModel"></textarea>
+          <span *ngIf="!description.valid && description.touched">Please enter description !</span>
+
+        </div>
       </div>
+
       <button class="btn btn-primary btn-sm" [disabled]="!postForm.valid" type="submit">Save</button>
       <pre>
-        <!-- {{postForm.form.value|json}} -->
+        {{postForm.form.value|json}}
       </pre>
+
     </form>
   </div>
 </div>
